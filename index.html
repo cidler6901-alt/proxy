@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Game Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons from jsDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+```
+
+</head>
+
+<body>
+
+```
+<header class="navbar">
+    <div class="logo">
+        <i data-lucide="gamepad-2"></i>
+        <span>Game Hub</span>
+    </div>
+
+    <div class="search-container">
+        <i data-lucide="search"></i>
+        <input
+            type="text"
+            id="search"
+            placeholder="Search games..."
+            autocomplete="off"
+        >
+    </div>
+
+    <button id="themeButton" class="icon-button" title="Toggle theme">
+        <i data-lucide="moon"></i>
+    </button>
+</header>
+
+
+<main>
+
+    <section class="hero">
+        <div>
+            <p class="small-title">WELCOME TO</p>
+            <h1>Game Hub</h1>
+
+            <p class="hero-text">
+                Your collection of browser games, all in one place.
+            </p>
+
+            <button class="play-button" onclick="scrollToGames()">
+                <i data-lucide="play"></i>
+                Browse Games
+            </button>
+        </div>
+    </section>
+
+
+    <section class="categories">
+        <button class="category active" data-category="all">
+            All
+        </button>
+
+        <button class="category" data-category="arcade">
+            Arcade
+        </button>
+
+        <button class="category" data-category="puzzle">
+            Puzzle
+        </button>
+
+        <button class="category" data-category="action">
+            Action
+        </button>
+
+        <button class="category" data-category="other">
+            Other
+        </button>
+    </section>
+
+
+    <section id="gamesSection" class="games-section">
+
+        <div class="section-header">
+            <div>
+                <p class="small-title">LIBRARY</p>
+                <h2>Games</h2>
+            </div>
+
+            <span id="gameCount"></span>
+        </div>
+
+
+        <div id="games" class="games-grid">
+
+            <article
+                class="game-card"
+                data-name="2048"
+                data-category="puzzle"
+            >
+                <div class="game-image game-2048">
+                    <span>2048</span>
+                </div>
+
+                <div class="game-info">
+                    <div>
+                        <h3>2048</h3>
+                        <p>Puzzle</p>
+                    </div>
+
+                    <button
+                        class="favorite"
+                        data-game="2048"
+                        title="Favorite"
+                    >
+                        <i data-lucide="star"></i>
+                    </button>
+                </div>
+
+                <a href="games/game1.html" class="game-button">
+                    Play
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+
+
+            <article
+                class="game-card"
+                data-name="Snake"
+                data-category="arcade"
+            >
+                <div class="game-image game-snake">
+                    <span>🐍</span>
+                </div>
+
+                <div class="game-info">
+                    <div>
+                        <h3>Snake</h3>
+                        <p>Arcade</p>
+                    </div>
+
+                    <button
+                        class="favorite"
+                        data-game="Snake"
+                        title="Favorite"
+                    >
+                        <i data-lucide="star"></i>
+                    </button>
+                </div>
+
+                <a href="games/game2.html" class="game-button">
+                    Play
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+
+
+            <article
+                class="game-card"
+                data-name="Clicker"
+                data-category="other"
+            >
+                <div class="game-image game-clicker">
+                    <span>CLICK</span>
+                </div>
+
+                <div class="game-info">
+                    <div>
+                        <h3>Clicker</h3>
+                        <p>Other</p>
+                    </div>
+
+                    <button
+                        class="favorite"
+                        data-game="Clicker"
+                        title="Favorite"
+                    >
+                        <i data-lucide="star"></i>
+                    </button>
+                </div>
+
+                <a href="games/game3.html" class="game-button">
+                    Play
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </article>
+
+        </div>
+
+        <div id="noResults" class="no-results">
+            <i data-lucide="search-x"></i>
+            <h3>No games found</h3>
+            <p>Try another search or category.</p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>Game Hub • Built with HTML, CSS & JavaScript</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+```
+
+</body>
+</html>
